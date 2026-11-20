@@ -1,0 +1,75 @@
+{
+  "name": "mui-compat-layer",
+  "version": "0.1.0",
+  "description": "Compatibility layer that maps Material UI v5 components to Radix UI primitives, providing automatic theming, migration utilities, and fallback implementations for teams migrating away from MUI",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./components": {
+      "import": "./dist/components.esm.js",
+      "require": "./dist/components.js",
+      "types": "./dist/components.d.ts"
+    },
+    "./codemods": {
+      "import": "./dist/codemods.esm.js",
+      "require": "./dist/codemods.js",
+      "types": "./dist/codemods.d.ts"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "biome check",
+    "prepare": "husky install",
+    "migrate": "node dist/cli.js"
+  },
+  "keywords": [
+    "mui",
+    "material-ui",
+    "radix-ui",
+    "migration",
+    "compatibility",
+    "design-system",
+    "react",
+    "typescript"
+  ],
+  "author": "WorkBuddy Project",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/workbuddy/mui-compat-layer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/workbuddy/mui-compat-layer/issues"
+  },
+  "homepage": "https://github.com/workbuddy/mui-compat-layer#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vitest": "^5.1.1",
+    "typescript": "^5.0.0",
+    "biome": "latest",
+    "ts-morph": "^20.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
